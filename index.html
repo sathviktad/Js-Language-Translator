@@ -2,12 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        move: { speed: 2 },
+        opacity: { value: 0.5 },
+        line_linked: { enable: true, opacity: 0.3 },
+      }
+    });
+  });
+</script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
@@ -16,6 +30,10 @@
     <title>Language Translator</title>
   </head>
   <body>
+    <header id="site-header">
+      <h1 class="typing-text">Welcome to<span id="typed-text"></span></h1>
+    </header> 
+    <div id="google_translate_element" class="translate-widget"></div>    
     <div class="mode">
       <label class="toggle" for="dark-mode-btn">
         <div class="toggle-track">
@@ -73,7 +91,7 @@
           <div class="dropdown-container" id="output-language">
             <div class="dropdown-toggle">
               <ion-icon name="globe-outline"></ion-icon>
-              <span class="selected" data-value="en">Englsih</span>
+              <span class="selected" data-value="en">English</span>
               <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
             <ul class="dropdown-menu">
@@ -98,8 +116,67 @@
         </div>
       </div>
     </div>
+    <section id="about">
+      <div class="about-container">
+        <h2>About the Translator</h2>
+        <p>
+          Our Language Translator is designed to provide quick and accurate translations
+          between various languages worldwide and English. It utilizes advanced 
+          translation models to ensure the best possible results.
+        </p>
+        <h3>Our Team</h3>
+        <p>
+          Developed by [Code Crafters], this project aims to bridge the 
+          communication gap between different linguistic communities. If you have any 
+          feedback, feel free to reach out!
+        </p>
+
+        <!-- Contact Section -->
+        <h3>Contact Us</h3>
+        <ul class="contact-info">
+          <li>
+            <strong>Sathvik Tadimeti</strong> - 
+            <a href="mailto:sathviktad@gmail.com">Mail</a> | 
+            <a href="https://www.linkedin.com/in/sathvik-tadimeti-848187283/" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <strong>Bhargav Maddipati</strong> - 
+            <a href="mailto:bhargavmaddipati2004@gmail.com">Mail</a> | 
+            <a href="https://www.linkedin.com/in/maddipati-v-s-bhargava-deekshitulu-417188344/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <strong>HarshaVardhan Segu</strong> - 
+            <a href="mailto:seguharsha25@gmail.com">Mail</a> | 
+            <a href="https://www.linkedin.com/in/segu-harsha-vardhan-799312292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
 
     <script src="script/languages.js"></script>
     <script src="script/script.js"></script>
+    <script>
+      document.getElementById("voice-btn").addEventListener("click", function() {
+        let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = "en-US";
+        recognition.start();
+        
+        recognition.onresult = function(event) {
+          document.getElementById("input-text").value = event.results[0][0].transcript;
+        };
+      });
+    </script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+              {pageLanguage: 'en'},
+              'google_translate_element'
+          );
+      } 
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
+
