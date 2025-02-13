@@ -1,44 +1,51 @@
-# Language Translator Web Application
-
+# Language Translator
 
 ## Overview
-
-This is a simple language translator web application built using pure HTML, CSS, and JavaScript. The project utilizes the Google Translate API to provide translation services, allowing users to translate text from one language to another seamlessly. The application is designed to be fully responsive, providing an optimal user experience across various devices and screen sizes.
+Language Translator is a simple and efficient web-based translation tool that allows users to translate text between multiple languages with ease. The system supports text input, file translation, and even voice input for seamless interaction.
 
 ## Features
+- **Text Translation**: Enter text manually and get instant translations.
+- **Voice Input**: Speak directly and get translations in the desired language.
+- **File Upload**: Upload a document for translation.
+- **Dark Mode Support**: Toggle between light and dark themes.
+- **Google Translate Integration**: Provides robust language translation capabilities.
+- **User-Friendly Interface**: Clean and intuitive design.
 
-- Translate text between multiple languages using the power of Google Translate API.
-- Simple and intuitive user interface for easy navigation and usage.
-- Fully responsive design ensures compatibility with desktop, tablet, and mobile devices.
-- Supports a wide range of languages, enabling users to translate to and from different language pairs.
-- Minimalistic and lightweight, ensuring fast loading times and smooth performance.
+## Technologies Used
+- **HTML, CSS, JavaScript** for frontend development.
+- **Google Translate API** for translations.
+- **Speech Recognition API** for voice input support.
+- **Particles.js** for an interactive background.
+- **Ionicons** for UI icons.
 
-## How to Use
+## Setup Instructions
+1. Clone the repository:
+   ```sh
+   https://github.com/sathviktad/Js-Language-Translator
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd project
+   ```
+3. Open `index.html` in your browser to run the application.
 
-1. Clone the repository to your local machine:
+## Usage
+1. Select the source and target languages.
+2. Enter text or use voice input for translation.
+3. View translated text instantly.
+4. Optionally, download the translated text as a document.
 
-```bash
-git clone https://github.com/Venkateeshh/Js-Language-Translator.git
-```
+## Contributors
+- **Sathvik Tadimeti**  
+  [Email](mailto:sathviktad@gmail.com) | [LinkedIn](https://www.linkedin.com/in/sathvik-tadimeti-848187283/)
+- **Bhargav Maddipati**  
+  [Email](mailto:bhargavmaddipati2004@gmail.com) | [LinkedIn](https://www.linkedin.com/in/maddipati-v-s-bhargava-deekshitulu-417188344/)
+- **HarshaVardhan Segu**  
+  [Email](mailto:seguharsha25@gmail.com) | [LinkedIn](https://www.linkedin.com/in/segu-harsha-vardhan-799312292/)
 
-2. Open the `index.html` file in your web browser.
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-3. Enter the text you want to translate in the input field.
 
-4. Select the source language and target language from the provided drop-down menus.
 
-5. Click the "Translate" button to get the translated text.
 
-## Demo
-
-For a live demonstration of the language translator web application, you can visit the following link: [Language Translator Demo](https://venkateeshh.github.io/Js-Language-Translator/)
-
-## Feedback and Contributions
-
-If you find any issues with the application or have suggestions for improvement, please feel free to create an issue or submit a pull request on the GitHub repository. Your feedback and contributions are highly appreciated!
-
-## About the Author
-
-This language translator web application is developed and maintained by [Venkateeshh](https://github.com/Venkateeshh). I am a passionate web developer with a keen interest in building useful and innovative projects using various web technologies.
-
-Thank you for checking out this project! If you find it helpful, don't forget to give it a star and share it with others. Happy translating!
