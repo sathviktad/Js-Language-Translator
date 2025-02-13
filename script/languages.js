@@ -47,6 +47,11 @@ const languages = [
     native: "Беларуская",
     code: "be",
   },
+  { no: "59", 
+    name: "Bengali", 
+    native: "বাংলা", 
+    code: "bn" 
+  },
   {
     no: "8",
     name: "Bulgarian",
@@ -149,6 +154,11 @@ const languages = [
     native: "Ελληνικά",
     code: "el",
   },
+  { no: "60", 
+    name: "Gujarati", 
+    native: "ગુજરાતી", 
+    code: "gu" 
+  },
   {
     no: "25",
     name: "Haitian Creole",
@@ -203,6 +213,11 @@ const languages = [
     native: "日本語",
     code: "ja",
   },
+  { no: "61", 
+    name: "Kannada", 
+    native: "ಕನ್ನಡ", 
+    code: "kn" 
+  },
   {
     no: "34",
     name: "Korean",
@@ -233,11 +248,21 @@ const languages = [
     native: "Malay",
     code: "ms",
   },
+  { no: "62", 
+    name: "Malayalam", 
+    native: "മലയാളം", 
+    code: "ml" 
+  },
   {
     no: "39",
     name: "Maltese",
     native: "Malti",
     code: "mt",
+  },
+  { no: "63", 
+    name: "Marathi", 
+    native: "मराठी", 
+    code: "mr" 
   },
   {
     no: "40",
@@ -262,6 +287,11 @@ const languages = [
     name: "Portuguese",
     native: "Português",
     code: "pt",
+  },
+  { no: "64", 
+    name: "Punjabi", 
+    native: "ਪੰਜਾਬੀ", 
+    code: "pa" 
   },
   {
     no: "44",
@@ -310,6 +340,16 @@ const languages = [
     name: "Swedish",
     native: "Svenska",
     code: "sv",
+  },
+  { no: "65", 
+    name: "Tamil", 
+    native: "தமிழ்", 
+    code: "ta" 
+  },
+  { no: "66", 
+    name: "Telugu", 
+    native: "తెలుగు", 
+    code: "te" 
   },
   {
     no: "52",
