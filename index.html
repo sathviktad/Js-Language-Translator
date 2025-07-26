@@ -4,48 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
+    
+    <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- Particles.js background -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80 },
-        size: { value: 3 },
-        move: { speed: 2 },
-        opacity: { value: 0.5 },
-        line_linked: { enable: true, opacity: 0.3 },
-      }
-    });
-  });
-</script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 80 },
+            size: { value: 3 },
+            move: { speed: 2 },
+            opacity: { value: 0.5 },
+            line_linked: { enable: true, opacity: 0.3 },
+          }
+        });
+      });
+    </script>
+
     <link rel="stylesheet" href="styles/style.css" />
     <title>Language Translator</title>
   </head>
+
   <body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
     <header id="site-header">
       <h1 class="typing-text">Welcome to<span id="typed-text"></span></h1>
-    </header> 
-    <div id="google_translate_element" class="translate-widget"></div>    
+    </header>
+
+    <!-- Google Translate Widget -->
+    <div class="page-translate-container">
+      <ion-icon name="language-outline"></ion-icon>
+      <div id="google_translate_element" class="translate-widget"></div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
     <div class="mode">
       <label class="toggle" for="dark-mode-btn">
         <div class="toggle-track">
           <input type="checkbox" class="toggle-checkbox" id="dark-mode-btn" />
           <span class="toggle-thumb"></span>
-          <img src="images/sun.png" alt="" />
-          <img src="images/moon.png" alt="" />
+          <img src="images/sun.png" alt="Light mode icon" />
+          <img src="images/moon.png" alt="Dark mode icon" />
         </div>
       </label>
     </div>
-    <div class="container">
-      <div class="card input-wrapper">
+
+    <!-- Main Translator Interface -->
+    <main class="container">
+      <!-- Input Language Card -->
+      <section class="card input-wrapper">
         <div class="from">
           <span class="heading">From :</span>
           <div class="dropdown-container" id="input-language">
@@ -55,18 +69,16 @@
               <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
             <ul class="dropdown-menu">
+              <li class="search-box-wrapper">
+                <input type="text" class="search-box" placeholder="Search language..." autocomplete="off" />
+              </li>
               <li class="option active">DropDown Menu Item 1</li>
               <li class="option">DropDown Menu Item 2</li>
             </ul>
           </div>
         </div>
         <div class="text-area">
-          <textarea
-            id="input-text"
-            cols="30"
-            rows="10"
-            placeholder="Enter your text here"
-          ></textarea>
+          <textarea id="input-text" cols="30" rows="10" placeholder="Enter your text here"></textarea>
           <div class="chars"><span id="input-chars">0</span> / 5000</div>
         </div>
         <div class="card-bottom">
@@ -77,15 +89,17 @@
             <input type="file" id="upload-document" hidden />
           </label>
         </div>
-      </div>
+      </section>
 
+      <!-- Swap Button -->
       <div class="center">
-        <div class="swap-position">
+        <div class="swap-position" role="button" aria-label="Swap Languages">
           <ion-icon name="swap-horizontal-outline"></ion-icon>
         </div>
       </div>
 
-      <div class="card output-wrapper">
+      <!-- Output Language Card -->
+      <section class="card output-wrapper">
         <div class="to">
           <span class="heading">To :</span>
           <div class="dropdown-container" id="output-language">
@@ -95,18 +109,24 @@
               <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
             <ul class="dropdown-menu">
+              <li class="search-box-wrapper">
+                <input type="text" class="search-box" placeholder="Search language..." autocomplete="off" />
+              </li>
               <li class="option active">DropDown Menu Item 1</li>
               <li class="option">DropDown Menu Item 2</li>
             </ul>
           </div>
         </div>
-        <textarea
-          id="output-text"
-          cols="30"
-          rows="10"
-          placeholder="Translated text will appear here"
-          disabled
-        ></textarea>
+        <div class="text-area">
+          <textarea id="output-text" cols="30" rows="10" placeholder="Translated text will appear here" disabled></textarea>
+          <button id="speak-btn" class="speak-btn" title="Listen to text">
+            <ion-icon name="volume-high-outline"></ion-icon>
+          </button>
+          <button id="copy-btn" class="copy-btn" title="Copy to clipboard">
+            <ion-icon name="copy-outline"></ion-icon>
+            <span class="tooltip">Copied!</span>
+          </button>
+        </div>
         <div class="card-bottom">
           <p>Download as a document!</p>
           <button id="download-btn">
@@ -114,8 +134,10 @@
             <ion-icon name="cloud-download-outline"></ion-icon>
           </button>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
+
+    <!-- About Section -->
     <section id="about">
       <div class="about-container">
         <h2>About the Translator</h2>
@@ -126,7 +148,7 @@
         </p>
         <h3>Our Team</h3>
         <p>
-          Developed by [Code Crafters], this project aims to bridge the 
+          Developed by <strong>Code Crafters</strong>, this project aims to bridge the 
           communication gap between different linguistic communities. If you have any 
           feedback, feel free to reach out!
         </p>
@@ -137,46 +159,56 @@
           <li>
             <strong>Sathvik Tadimeti</strong> - 
             <a href="mailto:sathviktad@gmail.com">Mail</a> | 
-            <a href="https://www.linkedin.com/in/sathvik-tadimeti-848187283/" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/sathvik-tadimeti-848187283/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
             <strong>Bhargav Maddipati</strong> - 
             <a href="mailto:bhargavmaddipati2004@gmail.com">Mail</a> | 
-            <a href="https://www.linkedin.com/in/maddipati-v-s-bhargava-deekshitulu-417188344/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/maddipati-v-s-bhargava-deekshitulu-417188344/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
-            <strong>HarshaVardhan Segu</strong> - 
+            <strong>Segu HarshaVardhan</strong> - 
             <a href="mailto:seguharsha25@gmail.com">Mail</a> | 
-            <a href="https://www.linkedin.com/in/segu-harsha-vardhan-799312292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/segu-harsha-vardhan-799312292/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
         </ul>
       </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+      <p>
+        Copyright &copy; <span id="year"></span> Code Crafters.
+        All Rights Reserved. |
+        <a href="LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
+      </p>
+    </footer>
 
-    <script src="script/languages.js"></script>
-    <script src="script/script.js"></script>
+    <!-- Scripts -->
+    <script src="script/languages.js" defer></script>
+    <script src="script/script.js" defer></script>
+
+    <!-- Voice Input Script -->
     <script>
-      document.getElementById("voice-btn").addEventListener("click", function() {
+      document.getElementById("voice-btn")?.addEventListener("click", function() {
         let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
         recognition.lang = "en-US";
         recognition.start();
-        
+
         recognition.onresult = function(event) {
           document.getElementById("input-text").value = event.results[0][0].transcript;
         };
       });
     </script>
-    <script src="script.js"></script>
+
+    <!-- Google Translate API -->
     <script type="text/javascript">
       function googleTranslateElementInit() {
-          new google.translate.TranslateElement(
-              {pageLanguage: 'en'},
-              'google_translate_element'
-          );
-      } 
-</script>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
   </body>
 </html>
+
 
