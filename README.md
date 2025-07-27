@@ -40,6 +40,21 @@
 5. Download the result using the download button.
 6. Use the theme toggle for light or dark mode.
 
+## Screenshots
+<img width="959" height="415" alt="Image" src="https://github.com/user-attachments/assets/442bc908-cee3-4eaa-87ae-d577375dd918" />
+
+<img width="959" height="412" alt="Image" src="https://github.com/user-attachments/assets/60a24d70-0b98-475e-b033-529a30ca9847" />
+
+<img width="746" height="413" alt="Image" src="https://github.com/user-attachments/assets/6734a8f0-1eca-4b02-b22e-6959be1efbf2" />
+
+<img width="857" height="420" alt="Image" src="https://github.com/user-attachments/assets/38906622-9594-4f66-91cc-311958a24bc2" />
+
+<img width="959" height="413" alt="Image" src="https://github.com/user-attachments/assets/f2a3cb99-ddf4-45f8-8456-190ff9a7f8ba" />
+
+<img width="959" height="413" alt="Image" src="https://github.com/user-attachments/assets/5d523a76-5028-45df-bf18-850618f89bc7" />
+
+<img width="959" height="414" alt="Image" src="https://github.com/user-attachments/assets/059687aa-1717-4c81-8252-c0934b76e083" />
+
 ## Contributors
 - **Sathvik Tadimeti**  
   [Email](mailto:sathviktad@gmail.com) | [LinkedIn](https://www.linkedin.com/in/sathvik-tadimeti-848187283/)
